@@ -44,7 +44,26 @@
 
 'Learn about hard and soft copies'
 
+// Q8.
 let city1 = ["mexico", "europe"]
 let city2 = ["china", "england"];
-let mergeCity = city1 + city2;
-console.log(typeof mergeCity);  // turn out as string
+// let mergeCity = city1 + city2;
+// console.log(typeof mergeCity);  // turn out as string
+
+// let mergeCity = [city1, city2];
+// console.log(mergeCity);     // geeting array of array
+
+// // concat method is better way:
+// let mergeCity = city1.concat(city2)
+// console.log(mergeCity); 
+
+
+// Q9.
+// let teaMenu = ["masala chai", "oolang chai", "green tea"];
+// let menuLength = teaMenu.length;
+// console.log(menuLength);
+
+//Q10.
+let cities = ["London", "kyoto", "capetown", "vancover"];
+let isLondonList = cities.includes("London");
+console.log(isLondonList);
