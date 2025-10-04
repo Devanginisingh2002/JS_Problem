@@ -37,8 +37,14 @@
 // [ 'green tea', 'oolang tea' ]
 // [ 'green tea', 'oolang tea' ]
 
-let topCities = ["Berlin", "Singapore", "New york"];
-let hardCopiesCities = [...topCities];     //Two methods: spread and slice topCities.slice()
-topCities.pop();
-console.log(hardCopiesCities);
+// let topCities = ["Berlin", "Singapore", "New york"];
+// let hardCopiesCities = [...topCities];     //Two methods: spread and slice topCities.slice()
+// topCities.pop();
+// console.log(hardCopiesCities);
 
+'Learn about hard and soft copies'
+
+let city1 = ["mexico", "europe"]
+let city2 = ["china", "england"];
+let mergeCity = city1 + city2;
+console.log(typeof mergeCity);  // turn out as string
