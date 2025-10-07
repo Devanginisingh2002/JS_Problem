@@ -1,0 +1,13 @@
+1. 'Learn about hard and soft copies' means spread.
+2. 'for-of' and 'for-in' loop.
+3. Object.keys(citiesPopulation)
+4. console.log(Object.keys(citiesPopulation))   
+5. Object properties: call, bind apply
+6. In below code, study about property, hasOwnProperty
+    for(const key in object) {
+        if(Object.property.hasOwnProperty.call(object, key)) {
+            const element = object[key];
+        }
+    }
+7. For-each loop, in this loop it iterate through the array, also consit a fxn.
+
