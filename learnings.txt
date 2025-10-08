@@ -11,3 +11,17 @@
     }
 7. For-each loop, in this loop it iterate through the array, also consit a fxn.
 
+------------------------------------------------------------------------------
+8. function greet(name) {   // parameter = placeholder
+    console.log(`"hey", ${name}`);
+}
+
+greet("Riya")   // argument
+
+9. 'this' keyword, so it works on the context.
+e.g: fan: ceiling fan or actual fan of someone.
+
+10. Higher-Order fxn: Akshay Saini
+forEach is higher order fxn
+
+11. Revise function Q4 & Q5.
