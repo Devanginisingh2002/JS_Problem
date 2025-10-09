@@ -25,3 +25,10 @@ e.g: fan: ceiling fan or actual fan of someone.
 forEach is higher order fxn
 
 11. Revise function Q4 & Q5.
+-----------------------------------------------------------------------------
+12. DOM BOM
+defer: learnt about this
+
+WINDOW: |--> DOM --> Elements
+        |--> BOM --> screen, navigator, location --> screen.height/width, navigator.userAgent, location.hostName
+        |--> JavaScript --> objects, arrays, fxn, class.
