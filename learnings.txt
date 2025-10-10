@@ -32,3 +32,7 @@ defer: learnt about this
 WINDOW: |--> DOM --> Elements
         |--> BOM --> screen, navigator, location --> screen.height/width, navigator.userAgent, location.hostName
         |--> JavaScript --> objects, arrays, fxn, class.
+
+13. DOM Manipulation: DOM Element, DOM Access.
+14. querySelector, querySelectorAll.
+15. getElementbyId, getElementbyClassName, getElementbyTagName
