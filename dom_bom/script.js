@@ -2,14 +2,14 @@
 // console.log(document.firstChild.firstChild);
 // console.log(document.getElementsByTagName("h1"));
 
-'Solving example 1'
+"Solving example 1";
 // Example 1:
-'Learnings:--'
-'addEvent Listener takes two argument as what event it pass and what functionality should perform'
-'In addEventListener, If we use function() {} (Normal fxn), it calls in current context, like who is calling'
-'If we use arrow fxn here, then "this" points to global object & gives window object.'
+"Learnings:--";
+"addEvent Listener takes two argument as what event it pass and what functionality should perform";
+"In addEventListener, If we use function() {} (Normal fxn), it calls in current context, like who is calling";
+'If we use arrow fxn here, then "this" points to global object & gives window object.';
 
-'Programming Term'
+"Programming Term";
 /*
 | Type of Function     | `this` refers to                              | Why                                                                                |
 | -------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -18,7 +18,7 @@
 
 */
 
-'Understanding way'
+"Understanding way";
 /*
 Think of it Like This (Kid-friendly Analogy):
 Imagine you’re in a classroom:
@@ -34,10 +34,25 @@ An arrow function says: “I don’t have my own hand — I’ll borrow whoever�
 //     // 'Further learn: difference b/w textContent & innerHTML'
 // })
 
+"Solving Example: 2";
+/*
+ * Learnings:
+ * classList: It gives all the list of the classes are there.
+ */
+// let btn2 = document
+//   .getElementById("highlightFirstCity")
+//   .addEventListener("click", function () {
+//     let changeList = document.getElementById("citiesList");
+//     changeList.firstElementChild.classList.add("highlight");
+//   });
 
-'Solving Example: 2'
-let btn2 = document.getElementById("highlightFirstCity").addEventListener('click', function() {
-    let changeList = document.getElementById("citiesList")
-    changeList.onchange
-})
+"Solving Example: 3";
+// let btn3 = document.getElementById("changeOrder")
+//            .addEventListener("click", function(){
+//             let changeCoffeeType = document.getElementById("coffeeType")
+//             changeCoffeeType.textContent = "Espresso";
+//             changeCoffeeType.style.backgroundColor = "brown";
+//             changeCoffeeType.style.padding = "7px";
+// })
 
+"Solving Example: 3";

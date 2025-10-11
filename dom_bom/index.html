@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    .highlight{
+        background-color: yellow; 
+        font-weight: bold;
+        color: #1a1a1a;
+    }
+
+</style>
 <body> 
     <h2>Hey, Learning about DOM & BOM</h1>
     <p>DOM</p>
@@ -21,17 +30,29 @@
     </section> -->
 
     <!-- Example: 2 Traversing the DOM -->
-     <section id="example-2">
+     <!-- <section id="example-2">
         <h2>Traversing the DOM</h2>
         <ul id="citiesList">
-            <li class="highlight">NewYork</li>
-            <li>Tokyo</li>
+            <li class="first_list">NewYork</li>
+            <li class="second_list">Tokyo</li>
             <li>Paris</li>
             <li>London</li>
         </ul>
         <button id="highlightFirstCity">Highlight First City</button>
      </section>
-    
+     -->
+
+     <!-- Example: 3 Manipulating DOM Elements -->
+      <section id="example-3">
+        <h2>Manipulating DOM Elements</h2>
+        <div id="coffeeOrder">
+            Order:
+            <span id="coffeeType">
+                Lattee
+            </span>
+        </div>
+        <button id="changeOrder">Change Order to Espresso</button>
+      </section>
 
 <script defer src="script.js"></script>
 

@@ -36,3 +36,11 @@ WINDOW: |--> DOM --> Elements
 13. DOM Manipulation: DOM Element, DOM Access.
 14. querySelector, querySelectorAll.
 15. getElementbyId, getElementbyClassName, getElementbyTagName
+
+--------------------------------------------------------------------------------
+16. HTML & DOM
+HTML: Markup language.
+DOM: Processed Element in document tree in memory.
+Summary: Html is not DOM & DOM is not html.
+Whatever we do as markup language, this language will being take or the piece of code is taken, up by browser, and internally browser runs C++
+And through C++, a whole document tree in the memory is being generated. And that generated tree is called DOM.
