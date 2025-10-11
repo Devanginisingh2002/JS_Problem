@@ -55,4 +55,45 @@ An arrow function says: “I don’t have my own hand — I’ll borrow whoever�
 //             changeCoffeeType.style.padding = "7px";
 // })
 
-"Solving Example: 3";
+"Solving Example: 4";
+'Learning: 1. createElement: By this we can create any element like p, h1, h2, and more.'
+'2. Processed Element known as Node.'
+'3. appendChild'
+
+// let btn4 = document.getElementById("addNewItem")
+//            .addEventListener("click", function(){
+
+//             let addNewItem = document.createElement("li");
+//             addNewItem.textContent = "Icecream";
+//             'These above sentences are processed HTMl, called as Nodes.'
+
+//             document.getElementById("shoppingList").appendChild(addNewItem);
+//            })
+
+"Solving Example 5";
+'Learning: lastElementChild property and remove'
+// let btn5 = document.getElementById("removeLastTask")
+//            .addEventListener("click", function(){
+//             let taskList = document.getElementById("taskList")
+//             taskList.lastElementChild.remove();
+//            });
+
+'Solving example 6'
+'Learning: Events -> Click, mouseover, dblclick'
+// let btn6 = document.getElementById("clickMeButton")
+//            .addEventListener("dblclick", function(){
+//             alert("hey")
+//            })
+
+'Solving example 7'
+'Learning: Firstly, we console (event) then found many properties, so the console given the property (target), so we check'
+'event.target.matches: Learnt about this'
+'Here, we did (event.target.match(.teaItem) because in big project we have many li or ul'
+// let btn7 = document.getElementById("teaList")
+//            .addEventListener("click", function(event){
+//                 if(event.target && event.target.matches(".teaItem")){
+//                     alert(`Selected ${event.target.textContent}`);
+//                 }
+//            })
+
+'Solving example 8'
