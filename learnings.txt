@@ -46,3 +46,21 @@ Whatever we do as markup language, this language will being take or the piece of
 And through C++, a whole document tree in the memory is being generated. And that generated tree is called DOM.
 
 17. appendChild: Adding new element
+
+18. Event Delegation and Event Bubbling
+🧠 Basic Idea
+Event Delegation means you handle events at a parent element instead of each child.
+Instead of attaching event listeners to many child elements,
+you add just one listener to their common parent,
+and use event bubbling to catch the events from the children.
+🧩 How It Works
+When you click an element, the event goes:
+from the clicked element → up through its parent elements (this is called bubbling).
+So, if you attach one event listener to the parent,
+you can detect which child was clicked by checking the event’s target.
+
+
+------------------------------------------------------------------------
+Research
+HTML COllections
+Node List: It looks like an array, but it is not an array. (Read more)

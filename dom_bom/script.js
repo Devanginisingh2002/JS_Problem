@@ -97,3 +97,27 @@ An arrow function says: “I don’t have my own hand — I’ll borrow whoever�
 //            })
 
 'Solving example 8'
+'Learning: Event: submit, preventDefault()'
+// let btn8 = document.getElementById("FeedbackForm")
+//            .addEventListener("submit", function(event){
+//                 event.preventDefault();
+//                 let feedback = document.getElementById("feedbackInput").value;
+//                 console.log(feedback);
+//                 document.getElementById("feedbackDisplay").textContent = `Feedback is ${feedback}`
+//            })
+
+'Solving Example 9'
+'Learnings: We directly add, addEventListener to document'
+'Here, the dom loaded, then the message will print.'
+// document.addEventListener("DOMContentLoaded", function(){
+//     document.getElementById("domStatus").textContent = "DOM Fully Loaded";
+// });
+
+'Solving Example 10'
+'Learnings: '
+
+let btn10 = document.getElementById("toggleHighlight").addEventListener("click", function(){
+    let desc_text = document.getElementById("descriptionText")
+    desc_text.classList.toggle("highlight");
+})
+
