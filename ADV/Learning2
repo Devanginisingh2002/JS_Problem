@@ -23,4 +23,21 @@ fetchData(){
 * Promise takes a callback also known as fxn.
 * It takes two parameters resolve, rejected
 
+
+'Prototypal Inheritance':
+I understand this from gpt.
+🧸 Imagine This:
+You have a toy box 🎁 (that’s your object).
+You open it and look for a toy (a property or method).
+If the toy isn’t inside, you ask your mom 👩 (the prototype):
+“Mom, do you have that toy?”
+If your mom doesn’t have it either, she asks grandma 👵 (the next prototype).
+This keeps going until someone finds the toy — or you reach the end (no one has it).
+That chain — you → mom → grandma — is the prototype chain.
+And this passing down of toys (properties) is called prototypal inheritance.
+
+----------------------------------------------------------------------------
+async/await/Promise-all
+Instead of .then and .catch we can use async-await
+We only use await when async already used.
  
