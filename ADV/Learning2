@@ -36,6 +36,13 @@ This keeps going until someone finds the toy — or you reach the end (no one ha
 That chain — you → mom → grandma — is the prototype chain.
 And this passing down of toys (properties) is called prototypal inheritance.
 
+'Quiz: Which of the following best describes prototypal inheritance in JavaScript?
+a. Objects inherit directly from other objects:  ✅   
+b. Objects inherit only from their constructor  
+c. Objects create a new scope for each instance
+d. Objects do not have inheritance capabilities 
+
+Option (a) correct -> (Reason: Your choice, “Objects inherit directly from other objects,” is correct because, in JavaScript, prototypal inheritance means that objects can directly reference and access properties from another object, known as the prototype. This fundamental feature allows for a flexible and dynamic way of creating objects and sharing behavior in JavaScript).
 ----------------------------------------------------------------------------
 async/await/Promise-all
 Instead of .then and .catch we can use async-await
