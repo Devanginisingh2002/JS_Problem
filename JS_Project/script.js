@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     tasks.push(newTask);
-    saveTasksLocal(); // savings data to localStorage
+    saveTasksLocal();     // savings data to localStorage
     todoInput.value = ""; //clear the input
     console.log(tasks);
   });

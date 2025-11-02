@@ -5,4 +5,4 @@
 
 'SetItem: it takes as key, value pairs: key can be any type but value should always be string'
 
-'JSON: Two types, Parse & Stringify', 'Stringify converts into string' and 'Parse: Parse it back from string to its whatever the original data type was.'
+'JSON: Two types, Parse & Stringify', 'Stringify converts into string' & 'Parse: Parse it back from string to its whatever the original data type was.'
