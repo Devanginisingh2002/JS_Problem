@@ -17,14 +17,37 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     tasks.push(newTask);
-    saveTasksLocal();     // savings data to localStorage
+    saveTasksLocal(); // savings data to localStorage
+    renderTask(newTask);  //by this, without refresh add the task.
     todoInput.value = ""; //clear the input
     console.log(tasks);
   });
 
   function renderTask(task) {
-    // console.log("Render Task", task);
-    console.log(task.text)
+    const li = document.createElement('li');
+    li.setAttribute("data-id", task.id);
+    if(task.completed) li.classList.add("completed")
+    li.innerHTML = `
+    <span>${task.text}</span>
+    <button>Delete</button>
+    `;
+
+  li.addEventListener("click", (e) => {
+    if(e.target.tagName === 'BUTTON') return;
+    task.completed = !task.completed;
+    li.classList.toggle("completed");
+    saveTasksLocal();
+  })
+
+  li.querySelector("button").addEventListener("click", (e) => {
+    e.stopPropagation();    //prevent toggle from firing
+    tasks = tasks.filter((t) => t.id != task.id);
+    li.remove();
+    saveTasksLocal();
+  })
+    todoList.append(li);
+    // console.log(task);
+    // console.log(task.text);
   }
   function saveTasksLocal() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
