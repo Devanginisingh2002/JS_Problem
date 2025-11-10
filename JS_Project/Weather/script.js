@@ -1,69 +1,48 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const API_KEY = "5f56d525d1619d0a2cd2eac4ce55588e"; // Replace with your OpenWeather API Key
+document.addEventListener("DOMContentLoaded", () => {   // for DOM Loaded
   const cityInput = document.getElementById("city-input");
-  const addCityBtn = document.getElementById("add-city-btn");
-  const cityList = document.getElementById("city-list");
-  const weatherContainer = document.getElementById("weather-container");
+  const weatherButton = document.getElementById("get-weather-btn");
+  const weatherInfo = document.getElementById("weather-info");
+  const cityName = document.getElementById("city-name");
+  const temperatureCheck = document.getElementById("temperature");
+  const description = document.getElementById("description"); 
+  const ErrorMsg = document.getElementById("error-message");
 
-  let cities = JSON.parse(localStorage.getItem("cities")) || [];
+  const API_KEY = "3dff195e535199bc26cd39fbfc7a2e83";   //env variables
 
-  // Render initial cities from local storage
-  renderCities();
+  weatherButton.addEventListener("click", async() => {
+    const city_check = cityInput.value.trim();
+    if(city_check == "") return;
 
-  // Add city on button click
-  addCityBtn.addEventListener("click", () => {
-    const city = cityInput.value.trim();
-    if (city && !cities.includes(city)) {
-      cities.push(city);
-      saveCities();
-      renderCities();
+    try{
+      const weatherData = await fetchWeatherData(city_check); 
+      console.log("check")
+      displayWeatherData(weatherData);
     }
-    cityInput.value = ""; // Clear input field
-  });
-
-  // Fetch weather data for the selected city
-  cityList.addEventListener("click", async (e) => {
-    if (e.target.tagName === "LI") {
-      const city = e.target.textContent;
-      const weatherData = await fetchWeatherData(city);
-      displayWeather(weatherData);
+    catch(Error){
+      showError();
     }
-  });
+  })
 
-  // Render the list of cities
-  function renderCities() {
-    cityList.innerHTML = ""; // Clear existing cities
-    cities.forEach((city) => {
-      const li = document.createElement("li");
-      li.textContent = city;
-      cityList.appendChild(li);
-    });
-  }
+  async function fetchWeatherData(city_check){
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_check}&units-metric&appid=${API_KEY}`
+    const response = await fetch(url);    //object
+    console.log(typeof response);
+    console.log("Response: ", response);
 
-  // Fetch weather data from the API
-  async function fetchWeatherData(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
-    const response = await fetch(url);
-    if (!response.ok) {
-      alert("City not found!");
-      return;
+    if(!response.ok){ //here, we are getting 'ok' in the form of true or false. And if mistype city name, it throws an error.
+      throw new Error("City not found")
     }
+
     const data = await response.json();
     return data;
   }
-
-  // Display the weather data in the weather container
-  function displayWeather(data) {
-    weatherContainer.innerHTML = `
-            <h3>${data.name}</h3>
-            <p>Temperature: ${data.main.temp}°C</p>
-            <p>Weather: ${data.weather[0].description}</p>
-        `;
+  function displayWeatherData(data){
+    console.log(data);
+    console.log(data.main[temp])
   }
+  function showError(){
+    weatherInfo.classList.add('hidden');
+    ErrorMsg.classList.remove('hidden');
 
-  // Save cities to local storage
-  function saveCities() {
-    localStorage.setItem("cities", JSON.stringify(cities));
   }
-});
+})

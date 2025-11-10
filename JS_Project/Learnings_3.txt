@@ -1,0 +1,25 @@
+# How to save the data on local storage.
+
+'Local storage gives an API, and browser has API to directly access this and All of the JS has an access to this one.'
+'If we just write localStorage in the fxn, then LocalStorage API will be invoked '
+
+'SetItem: it takes as key, value pairs: key can be any type but value should always be string'
+
+'JSON: Two types, Parse & Stringify', 'Stringify converts into string' & 'Parse: Parse it back from string to its whatever the original data type was.'
+
+'EVENT PROPAGATION / EVENT BUBBLING (LEARN ABOUT THIS)'
+
+
+=======================================================================================================================================================
+
+'Weather Application Learning: '
+Whenever we are making a web request to any other server or to the database. (Remeber two things):
+1. The server may throw some error, It's nor gurantee that if we are making request, response will back. So, Server may throw some error.
+2. Server or Databse are in the other continent, It means we dont get response so quickly, it may take some time.
+
+
+'Fetch'
+The fetchAPI provides a JS interface for making HTTP requests and processing the responses. (MDN)
+
+JS alone is not capable of making the web request. Either we need a node environment or a window envt from a browser to make
+this HTTP Request. 
